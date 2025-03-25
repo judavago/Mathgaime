@@ -1,3 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Matemáticas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #eef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .game-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            margin-top: 20px;
+            display: none;
+        }
+        .question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .answers {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .answer-box {
+            background-color: #87CEEB;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 60px;
+            text-align: center;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        .answer-box:hover {
+            background-color: #4682B4;
+            color: white;
+        }
+        .timer {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: red;
+        }
+        .score {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="name-container">
+        <h2>Bienvenido</h2>
+        <input type="text" id="username" placeholder="Ingresa tu nombre">
+        <button onclick="setUsername()">Guardar Nombre</button>
+    </div>
+
+    <div class="game-container" id="game-container">
+        <h2>Bienvenido, <span id="username-display">Jugador</span></h2>
+        <div class="score">Puntaje: <span id="score">0</span></div>
+        <div class="timer">Tiempo restante: <span id="time">15</span> segundos</div>
+        <div class="question" id="question"></div>
+        <div class="answers" id="answers"></div>
+    </div>
+    
 <!-- Agrega el SDK de Firebase -->
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js"></script>
@@ -5,13 +81,13 @@
 <script>
     // Configuración de Firebase (cambia estos valores por los de tu proyecto)
     const firebaseConfig = {
-        apiKey: "TU_API_KEY",
-        authDomain: "TU_PROYECTO.firebaseapp.com",
-        databaseURL: "https://TU_PROYECTO.firebaseio.com",
-        projectId: "TU_PROYECTO",
-        storageBucket: "TU_PROYECTO.appspot.com",
-        messagingSenderId: "TU_MESSAGING_SENDER_ID",
-        appId: "TU_APP_ID"
+            apiKey: "AIzaSyBHBSL-LEwMILfZiBCLefjBJdOoo5LcfJQ",
+            authDomain: "desarrollo-app-f82ad.firebaseapp.com",
+            projectId: "desarrollo-app-f82ad",
+            storageBucket: "desarrollo-app-f82ad.firebasestorage.app",
+            messagingSenderId: "4425271323",
+            appId: "1:4425271323:web:93476c9fa981134e9490be",
+            measurementId: "G-N9107K3F3Y"
     };
 
     // Inicializar Firebase
@@ -113,3 +189,6 @@
         location.reload();
     }
 </script>
+
+</body>
+</html>
